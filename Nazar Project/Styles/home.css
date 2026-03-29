@@ -1,0 +1,93 @@
+@import "variables.css";
+
+.main-info {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color, #27ae60);
+    margin: 10px auto 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 30px;
+    background: #fdfdfd;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.feature-card__icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Кроки (Workflow) */
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.step {
+    flex: 1;
+    min-width: 200px;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.step span {
+    background: var(--primary-color, #27ae60);
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .banner { padding: 40px 15px; }
+    .banner__title { font-size: 24px; }
+    .step { width: 100%; }
+}
